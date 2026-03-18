@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 260 25% 4%;
+    --foreground: 0 0% 95%;
+
+    --card: 260 20% 8%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 260 20% 8%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 330 80% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 260 15% 14%;
+    --secondary-foreground: 0 0% 85%;
+
+    --muted: 260 10% 16%;
+    --muted-foreground: 260 10% 50%;
+
+    --accent: 0 100% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 260 10% 12%;
+    --input: 260 10% 14%;
+    --ring: 330 80% 60%;
+
+    --radius: 0.75rem;
+    --radius-outer: 16px;
+    --radius-inner: 12px;
+
+    --surface: 260 20% 8%;
+    --surface-hover: 260 18% 12%;
+    --live: 0 100% 50%;
+
+    --sidebar-background: 260 25% 6%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 330 80% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 260 15% 14%;
+    --sidebar-accent-foreground: 0 0% 90%;
+    --sidebar-border: 260 10% 12%;
+    --sidebar-ring: 330 80% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    letter-spacing: -0.04em;
+    font-weight: 600;
+  }
+}
+
+@layer utilities {
+  .font-mono-data {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .glow-live {
+    box-shadow: 0 0 12px 2px hsl(0 100% 50% / 0.4);
+  }
+
+  .card-shadow {
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.05), 0 10px 15px -3px rgba(0,0,0,0.5);
+  }
+
+  .card-shadow-hover {
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.08), 0 20px 25px -5px rgba(0,0,0,0.7);
+  }
+}
